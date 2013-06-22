@@ -35,3 +35,13 @@
                          [:a :b :c]
                          {}) {:a 0, :b 0, :c 0}))))
 
+
+(deftest a-silly-test-for-exercise-6-4-6
+  (testing "try the reduce function"
+    (is (= (reduce + 0 [1 2 3 4]) 10))
+    (is (= (reduce * 1 [1 2 3 4]) 24))
+    (is (= (reduce (fn [so-far val]
+                         (assoc so-far val 0))
+                         {}
+                         [:a :b :c]) {:a 0, :b 0, :c 0}))))
+
