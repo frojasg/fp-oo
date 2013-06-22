@@ -32,7 +32,7 @@
       so-far
     (recursive-function-2 (rest numbers) (* so-far (first numbers))))))
 
-
+;;Exercise 6.4.4
 (def reduce-function
   (fn [combiner numbers so-far]
     (if (empty? numbers)

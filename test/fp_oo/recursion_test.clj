@@ -28,3 +28,10 @@
     (is (= (reduce-function * [1 2 3 4] 1) 24))
     (is (= (reduce-function + [1 2 3 4] 0) 10))))
 
+(deftest a-silly-test-for-exercise-6-4-5
+  (testing "try to pass a map to the reduce-function"
+    (is (= (reduce-function (fn [so-far elt]
+                           (assoc so-far elt 0))
+                         [:a :b :c]
+                         {}) {:a 0, :b 0, :c 0}))))
+
