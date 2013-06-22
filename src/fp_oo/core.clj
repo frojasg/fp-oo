@@ -1,6 +1,11 @@
 (ns fp-oo.core
   (:gen-class))
 
+(def sum
+   (fn [& args]
+     (apply + args)))
+
+
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
